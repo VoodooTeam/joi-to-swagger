@@ -74,10 +74,6 @@ module.exports = exports = function parse (schema, existingComponents) {
 
 	if (!swagger) return { swagger, components };
 
-	if (schema._valids && schema._valids.has(null)) {
-		swagger.nullable = true;
-	}
-
 	if (schema._description) {
 		swagger.description = schema._description;
 	}
